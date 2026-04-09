@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my bio</title>
+
+    <style>
+        <body {
+            background: linear-gradient(135deg,#1a1a1a
+#000);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+        .container {
+            margin-top: 50px;
+            animation: slideUp 1s ease;
+        }
+
+        .profile {
+            width: 120px;
+            border-radius: 50%;
+            animation: float 3s infinite ease-in-out;
+        }
+        h1{
+            color: rgb(197, 21, 21);
+            margin-top: 10px;
+            text-shadow: 0 0 10px cyan;
+        }
+        .bio{
+            color: rgb(25, 166, 221);
+            margin-bottom: 20px;
+        }
+
+        .link {
+            display: block;
+            width: 220px;
+            margin: 10px auto;
+            padding: 12px;
+            background-color: linear-gradient(45deg,cyan,
+            blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transform: 0.3s;
+            box-shadow: 0 0 10px
+            rgba(0,225,225,0,5);
+        }
+        
+        .link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .link:active{
+            transform: scale(0.95);
+        }
+
+        /* ANIMASI */
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes float {
+            0% {transform: translateY(0);}
+            50% {transform: translateY(-10px);}
+            100% {transform: translateY(0);}
+        }
+
+    </style>
+
+</head>
+<body>
+ 
+    <div class="container">
+
+        <img src="Pas foto_1.png" alt="foto profil"
+width="150">
+
+        <h1>IBNUL FAQIH AL MUQODDAMI</h1>
+        <p class="bio">Saya sedang belajar 
+coding dan ingin jadi developer</p>
+        
+        <a href="https://www.instagram.com/zahrr4aa8_?igsh=bXdiN2ZkNnlrYmxl"
+    class="link" target="_blank">Instagram</a>
+        <a href="https://wa.me/qr/U4T52QN6WVTCE1" class="link"
+    target="_blank">WhatshApp</a>
+        <a href="#" class="link">portofolio</a>
+
+    </div>
+
+    <script>
+        const text = "Saya sedang belajar coding dan ingin jadi developer";
+        let index = 0;
+
+        function ketik () {
+            if (index <text.length ) {
+
+document.getElementById("typing").innerHTML +=
+text.charAt(index);
+                index++;
+                setTimeout(ketik,50);
+            }
+        }
+
+            ketik();
+    </script>
+    
+</body>
+</html>
